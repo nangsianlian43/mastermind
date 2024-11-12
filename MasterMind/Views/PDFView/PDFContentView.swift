@@ -9,7 +9,7 @@ import SwiftUI
 
 struct PDFContentView: View {
     
-    let pdfUrl = Bundle.main.url(forResource: "PDF", withExtension: "pdf")!
+    let pdfUrl = Bundle.main.url(forResource: "mastermind", withExtension: "pdf")!
     
     var body: some View {
         PDFViewRep(url: pdfUrl)
