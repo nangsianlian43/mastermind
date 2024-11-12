@@ -20,8 +20,8 @@ struct ContentView: View {
                 }
             
             // Game Tab with Quiz
-            QuizView()  // Add QuizView inside the NavigationStack
-            
+//            QuizView()  // Add QuizView inside the NavigationStack
+            QuizViewWithUpdate()
                 .tabItem {
                     Image(systemName: "gamecontroller.fill")
                     Text("Game")
@@ -40,7 +40,6 @@ struct ContentView: View {
                     Image(systemName: "person.fill")
                     Text("Account")
                 }
-            
         }
     }
 }

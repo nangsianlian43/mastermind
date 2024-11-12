@@ -20,3 +20,15 @@ struct ButtonModifier: ViewModifier {
             .foregroundColor(.black)
     }
 }
+
+struct QuizAnswerChoiceButton: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .frame(width: 350, height: 25)
+            .padding()
+            .background(Color.gray)
+            .foregroundColor(.white)
+            .cornerRadius(8)
+            .padding(.vertical, 4)
+    }
+}

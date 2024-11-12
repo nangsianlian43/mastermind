@@ -13,7 +13,6 @@ struct PDFContentView: View {
     
     var body: some View {
         PDFViewRep(url: pdfUrl)
-            .scaledToFill()
     }
 }
 

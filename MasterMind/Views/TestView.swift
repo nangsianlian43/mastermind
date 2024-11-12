@@ -9,27 +9,30 @@ import SwiftUI
 import FirebaseFirestore
 
 struct TestView: View {
-    @StateObject private var viewModel = QuestionViewModel()
+    
+    
+    @ObservedObject var questionViewModel = QuestionViewModel()
     
     var body: some View {
         VStack{
             Text("Lists")
-            List(viewModel.questions) { question in
+            List(questionViewModel.questions) { question in
                 VStack {
                     Text("Question: \(question.question)")
-                
+                        .font(.title)
+                        .padding()
+                    
                     VStack(alignment: .leading) {
                         ForEach(question.answers, id: \.self) { ans in
-                                Text(ans)
+                            Text(ans)
+                                .modifier(QuizAnswerChoiceButton())
                         }
                     }
-                    
-                    Text("The correct Ans is: \(question.answers[question.correct])")
                 }
             }
         }
-        .onAppear() {
-            self.viewModel.fetchQuestions()
+        .onAppear {
+            questionViewModel.getData()
         }
     }
 }
