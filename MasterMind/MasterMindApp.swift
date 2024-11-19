@@ -11,16 +11,16 @@ import FirebaseDatabase
 
 class AppDelegate: NSObject, UIApplicationDelegate {
     var ref: DatabaseReference!
-  func application(_ application: UIApplication,
-                   didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-    FirebaseApp.configure()
-      
-     
-      
-      ref = Database.database().reference()
-
-    return true
-  }
+    func application(_ application: UIApplication,
+                     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+        FirebaseApp.configure()
+        
+        
+        
+        ref = Database.database().reference()
+        
+        return true
+    }
 }
 
 
@@ -32,9 +32,9 @@ struct MasterMindApp: App {
     init() {
         FirebaseApp.configure()
     }
-//      @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
-
-
+    //      @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+    
+    
     var body: some Scene {
         WindowGroup {
             ContentView()

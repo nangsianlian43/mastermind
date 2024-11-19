@@ -19,26 +19,26 @@ struct HomeView: View {
                     // Our Story
                     NavigationLink(destination: OurStoryView()) {
                         Text("Our Story")
-                            .modifier(ButtonModifier())
+                            .modifier(ButtonModifier(color: Constants.primayButtonColor))
                         
                     }
                     
                     // Our Team
                     NavigationLink(destination: OurTeamView()) {
                         Text("Our Team")
-                            .modifier(ButtonModifier())
+                            .modifier(ButtonModifier(color: Constants.primayButtonColor))
                     }
                     
                     // Contacts
                     NavigationLink(destination: ContactsView()) {
                         Text("Contacts")
-                            .modifier(ButtonModifier())
+                            .modifier(ButtonModifier(color: Constants.primayButtonColor))
                     }
                     
                     // Social Media
                     NavigationLink(destination: SocialMediaView()) {
                         Text("Social Media")
-                            .modifier(ButtonModifier())
+                            .modifier(ButtonModifier(color: Constants.primayButtonColor))
                     }
                     
                     Text("Different Programs")

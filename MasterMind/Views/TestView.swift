@@ -25,14 +25,14 @@ struct TestView: View {
                     VStack(alignment: .leading) {
                         ForEach(question.answers, id: \.self) { ans in
                             Text(ans)
-                                .modifier(QuizAnswerChoiceButton())
+                                .modifier(QuizAnswerChoiceButton(color: .secondary))
                         }
                     }
                 }
             }
         }
-        .onAppear {
-            questionViewModel.getData()
+        .task {
+            await questionViewModel.getQuestion()
         }
     }
 }
